@@ -1,0 +1,17 @@
+# Core dependencies
+psutil>=5.8.0
+
+# USB device detection
+pyusb>=1.2.1
+
+# Platform-specific dependencies
+# Windows
+pywin32>=228; sys_platform == "win32"
+wmi>=1.5.1; sys_platform == "win32"
+
+# Linux/macOS
+pybluez>=0.23; sys_platform in ["linux", "darwin"]
+
+# Optional dependencies for enhanced functionality
+# These are not strictly required but provide better device detection
+# bluetooth-power-manager>=1.0.0  # Uncomment if available
